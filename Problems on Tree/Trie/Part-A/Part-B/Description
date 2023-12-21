@@ -1,0 +1,8 @@
+Question:
+Given a string ‘s’ as input, you choose some substring exactly once and reverse it to form a new string. 
+For example, in the string ‘click’ , select the substring s[ 1 … 3] after performing the mentioned operation, the new string will be ‘scilk’. 
+Do this for all the substrings of length >=2.
+Count the number of unique strings that can be obtained by doing this operation
+
+Input format - The only input will be a string ‘S’ which consists of lowercase characters from the terminal
+Output format - Print all the unique substrings per line and in the end the number of unique strings that can be formed on the output.txt file
