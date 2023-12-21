@@ -1,0 +1,23 @@
+You are living in a city that has n bus stops numbered from 0 to n-1 with bi-directional roads between some bus stops. The inputs are provided such that you can reach any bus stop from any other bus stop and that there is atmost one road between any two bus stops. You want to know in how many ways you can travel from busstop 0 to bus stop n-1 in the shortest amount of time.
+
+Print the number of ways you can arrive at your destination in the shortest amount of time and the shortest time to reach your destination.
+ 
+Input:
+ First line will be n
+ Next lines will be Matrix M of nxn where M[u][v] cell represents the time minutes to travel from u bus stop to v bus stop.
+ 
+Output:total ways from src to dest and minimum time from src to dest.
+
+ Sample Input and Output:
+ 
+Input:
+ 7
+ 0 1 2 1 0 0 0
+ 1 0 0 0 2 0 0
+ 2 0 0 0 1 0 4
+ 1 0 0 0 2 1 0
+ 0 2 1 2 0 0 2
+ 0 0 0 1 0 0 3
+ 0 0 0 0 2 3 0
+ Output:
+ 4 5
