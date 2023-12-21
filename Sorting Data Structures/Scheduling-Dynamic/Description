@@ -1,0 +1,27 @@
+Weighted Job Scheduling is a problem where you are given a set of presenta ons with start and end mes, and a weight (here, popularity score) associated with each presenta on.
+The goal is to find the maximum popularity score that can be earned by scheduling presenta ons such that no two presenta ons overlap.
+
+# ALGORITHM
+ 1. Sort the presenta ons by their finish me: First, sort the presenta ons in non-decreasing or
+ der of
+ their finish mes. This will make it easier to find the next presenta on that can be scheduled a er the
+ current presenta on.
+ 2. Find the latest non-conflic ng presenta on: For each presenta on, find the latest presenta on that
+ does not conflict with it. This can be done by itera ng through the sorted list of presenta ons in reverse
+ order and checking if the start me of the current presenta on is greater than or equal to the finish
+ me of the previous presenta on.
+ 3. Create a table to store the maximum profit: Create a table dp of size n, where n is the number of
+ presenta ons, to store the maximum popularity score that can be earned by scheduling presenta ons 
+from 0 to  i.
+ Ini alize  dp[0] to the popularity score of the  first presenta on.
+ 4.  Fill the table using dynamic programming: For each presenta on  i from 1 to  n-1, calculate the
+ maximum popularity score that can be achieved by either including or excluding the current 
+presenta on. If the current presenta on is included, then add its weight to the maximum profit 
+earned by scheduling presenta ons up to the latest non-conflic ng presenta on. If the current 
+presenta on is excluded, then 
+the maximum profit remains unchanged. 
+Store the maximum of these two values in dp[i].
+ 5. Return the maximum popularity score: The maximum popularity score that can be earned by scheduling 
+presenta ons is stored in dp[n-1].
+
+
