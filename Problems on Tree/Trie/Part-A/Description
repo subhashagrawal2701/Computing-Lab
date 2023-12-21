@@ -1,0 +1,15 @@
+Question: Given a string ‘s’ as input by a user through the terminal ,take all possible substrings of it 
+and reverse it to form a new string and print it on the terminal. Choose all substrings of size >=2.
+ Example ;
+ Input : S = ‘aabab’
+ All possible strings formed after the reversal operation :
+ aabab
+ baaab
+ abaab
+ babaa
+ abaab
+ aabab
+ ababa
+ aaabb
+ aabab
+ aabba
