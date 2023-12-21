@@ -1,1 +1,33 @@
+#PROBLEM
+Inputformat:
+ <Number of presentations (N)> <Divisions in Greedy Approach(K)>
+ <Start time in HHMM format> <End time in HHMM format> <Popularity score>
+ <String containing presentation title>
+ Example:
+ 53
+ 0900 1000 8 p1
+ 0930 1030 6 p2
+ 1000 1100 7 p3
+ 1030 1130 9 p4
+ 1100 1200 5 p5
 
+ Output format:
+ Print the list of selected presentations in one presentation per line, along with their starting times,ending times,popularity scores and presentation titles.
+ Also report the maximum total popularity score of the selected presentations.
+
+#ALGORITHM
+ 1. “K” denotes the number of timeline divisions,which is taken as a user input
+ 2.Sort the “N” presentations in non-decreasing order of ending time. Let the sorted order of presentations be p1,p2,…,pN
+ 3.Initialize “timeline_start” as the starting time of p1 and “timeline_end” as the ending time of pN.
+ 4.Initialize “bestGreedySum” as 0
+ 5.Iterate until K==1 isTrue:
+    a) Divide the current timeline (from timeline_start to timeline_end) into “K” equalparts.
+    b) Select the presentation (say,pKBest) that completely lies within the K-th part (lastpart) with the highest popularity score.
+    c) bestGreedySum = bestGreedySum + popularity score of pKBest.
+    d) timeline_end = starting time of pKBest.
+    e) K=K-1
+
+ 6. When K=1:
+     a) Sort the presentations by their popularity scores in descending order and then iteratively select the presentation with the highest popularity score that does not conflict with any previously selected presentation.
+     b) Update “bestGreedySum” by adding the popularity score of the selected presentations
+ 7. Output “bestGreedySum” as the maximum total popularity score.
